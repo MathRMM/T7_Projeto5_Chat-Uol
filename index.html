@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="Public/Images/download.png">
+    <title>Chat Uol</title>
+
+    <link rel="stylesheet" href="Public/CSS/reset.css">
+    <link rel="stylesheet" href="Public/CSS/style.css">
+</head>
+
+<body>
+    <div class="root">
+        <header>
+            <div class="image">
+                <img src="Public/Images/download.png" alt="">
+            </div>
+            <div class="contats">
+                <ion-icon name="people-sharp"></ion-icon>
+            </div>
+        </header>
+        <div class="container">
+        
+        </div>
+        
+        <footer>
+            <div class="text"><input type="text" placeholder="Escreva aqui..."></div>
+            <ion-icon name="paper-plane-outline"></ion-icon>
+        </footer>
+
+        <div class="sidebar hidden">
+            <h1> Escolha um contato para enviar mensagem:</h1>
+            <ul class="participants">
+                <li>
+                    <ion-icon name="people-sharp"></ion-icon>
+                    <span>Todos</span>
+                </li>
+                <li>
+                    <ion-icon name="person-circle-sharp"></ion-icon>
+                    <span>clebinho</span>
+                </li>
+            </ul>
+            <h1>Escolha a visibilidade</h1>
+            <ul class="visible">
+                <li>
+                    <ion-icon name="lock-open-sharp"></ion-icon>
+                    <span>Público</span>
+                </li>
+                <li>
+                    <ion-icon name="lock-closed-sharp"></ion-icon>
+                    <span>Reservadamente</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="src/index.js"></script>
+<script src="src/Components/message.js"></script>
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+</html>
