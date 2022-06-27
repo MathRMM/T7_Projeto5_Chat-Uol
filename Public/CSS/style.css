@@ -2,7 +2,13 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    background-color: #E5E5E5
+    background-color: #E5E5E5;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar{
+    display: none;
 }
 
 main {
@@ -47,6 +53,7 @@ header ion-icon{
     background-color: white;
     display: flex;
     align-items: center;
+    box-sizing: border-box;
 
     margin: 6px 0;
     padding-left: 6px;
@@ -120,6 +127,7 @@ footer div p {
 
 .sidebar{
     width: 50%;
+    max-width: 300px;
     height: 100%;
     position: fixed;
     right: 0;
