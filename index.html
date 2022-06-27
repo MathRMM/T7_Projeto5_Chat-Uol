@@ -14,48 +14,55 @@
 
 <body>
     <div class="root">
-        <header>
-            <div class="image">
-                <img src="Public/Images/download.png" alt="">
-            </div>
-            <div class="contats">
-                <ion-icon name="people-sharp"></ion-icon>
-            </div>
-        </header>
-        <div class="container">
-        
-        </div>
-        
-        <footer>
-            <div class="text"><input type="text" placeholder="Escreva aqui..."></div>
-            <ion-icon name="paper-plane-outline"></ion-icon>
-        </footer>
+        <main>
+            <div class="background hidden"></div>
+            <header>
+                <div class="image">
+                    <img src="Public/Images/download.png" alt="">
+                </div>
+                <div class="contats">
+                    <ion-icon name="people-sharp" onclick=sidebar()></ion-icon>
+                </div>
+            </header>
+            <ul class="container">
 
-        <div class="sidebar hidden">
-            <h1> Escolha um contato para enviar mensagem:</h1>
-            <ul class="participants">
-                <li>
-                    <ion-icon name="people-sharp"></ion-icon>
-                    <span>Todos</span>
-                </li>
-                <li>
-                    <ion-icon name="person-circle-sharp"></ion-icon>
-                    <span>clebinho</span>
-                </li>
             </ul>
-            <h1>Escolha a visibilidade</h1>
-            <ul class="visible">
-                <li>
-                    <ion-icon name="lock-open-sharp"></ion-icon>
-                    <span>Público</span>
-                </li>
-                <li>
-                    <ion-icon name="lock-closed-sharp"></ion-icon>
-                    <span>Reservadamente</span>
-                </li>
-            </ul>
-        </div>
+
+            <footer>
+                <div>
+                    <div class="text"><input type="text" placeholder="Escreva aqui..."></div>
+                    <p>Enviando para Todos</p>
+                </div>
+                <ion-icon name="paper-plane-outline" onclick=postMessage()></ion-icon>
+            </footer>
+
+            <div class="sidebar ocult">
+                <h1> Escolha um contato para enviar mensagem:</h1>
+                <ul class="participants">
+                    <li>
+                        <ion-icon name="people-sharp"></ion-icon>
+                        <span>Todos</span>
+                    </li>
+                    <li>
+                        <ion-icon name="person-circle-sharp"></ion-icon>
+                        <span>clebinho</span>
+                    </li>
+                </ul>
+                <h1>Escolha a visibilidade</h1>
+                <ul class="visible">
+                    <li onclick = publicPrivate(this)>
+                        <ion-icon name="lock-open-sharp"></ion-icon>
+                        <span>Público</span>
+                    </li>
+                    <li onclick = publicPrivate(this)>
+                        <ion-icon name="lock-closed-sharp"></ion-icon>
+                        <span>Reservadamente</span>
+                    </li>
+                </ul>
+            </div>
+        </main>
     </div>
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="src/index.js"></script>

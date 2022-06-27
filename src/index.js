@@ -14,7 +14,7 @@ function start(){
 
 <footer>
     <div class="text"><input type="text" placeholder="Escreva aqui..."></div>
-    <ion-icon name="paper-plane-outline"></ion-icon>
+    <ion-icon name="paper-plane-outline" onclick = postMessage(this)></ion-icon>
 </footer>
 `
 }
