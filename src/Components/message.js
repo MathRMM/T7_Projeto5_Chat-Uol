@@ -98,13 +98,25 @@ function rollEndPage() {
 
 /* ----------------- Destinatario e reservados ---------------------- */
 function chooseTo(element){
-   address = String(element.querySelector("span").innerHTML)
-   document.querySelector("footer div p").innerHTML =`Enviando para ${address}`
+    address = String(element.querySelector("span").innerHTML)
+    document.querySelector("footer div p").innerHTML =`Enviando para ${address}`
+
+    if (document.querySelector(".participants .check.select") !== null){
+        document.querySelector(".participants .check.select").classList.remove("select")
+    }
+
+    element.querySelector(".check").classList.add("select")
 }
 
 function publicPrivate(element){
     let way = String(element.querySelector("span").innerHTML)
-    console.log(way)
+
+    if (document.querySelector(".visible .check.select") !== null){
+        document.querySelector(".visible .check.select").classList.remove("select")
+    }
+
+    element.querySelector(".check").classList.add("select")
+
     switch (way) {
         case "Público":
             type = "message"
@@ -137,19 +149,26 @@ function postMessage(){
 function renderParticipanst(event){
     document.querySelector(".sidebar .participants").innerHTML =`
     <li onclick = chooseTo(this)>
-        <ion-icon name="people-sharp"></ion-icon>
-        <span>Todos</span>
+        <div>
+            <ion-icon name="people-sharp"></ion-icon>
+            <span>Todos</span>
+        </div>
+        <ion-icon name="checkmark-sharp" class ="check"></ion-icon>
     </li>
     `
     event.data.map((name)=>{
         document.querySelector(".sidebar .participants").innerHTML += `
         <li onclick = chooseTo(this)>
-            <ion-icon name="person-circle-sharp"></ion-icon>
-            <span>${name.name}</span>
+            <div>
+                <ion-icon name="person-circle-sharp"></ion-icon>
+                <span>${name.name}</span>
+            </div>
+            <ion-icon name="checkmark-sharp" class ="check"></ion-icon>
         </li>
         `
     })
 }
+
 
 /* ----------------- Sidebar ---------------------- */
 

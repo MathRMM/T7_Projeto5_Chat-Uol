@@ -111,6 +111,7 @@ footer div p {
     font-weight: 300;
     font-size: 14px;
     color: #505050;
+    margin-top: 5px;
 }
 
 .hidden{
@@ -145,8 +146,9 @@ footer div p {
 
 
 .participants li, .visible li{
-    text-align: start;
     margin: 16px 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .background{
@@ -158,4 +160,13 @@ footer div p {
     right: 0;
     background: #0009;
     transition: all 150ms linear;
+}
+
+.sidebar .check{
+    color: green;
+    opacity: 0;
+}
+
+.sidebar .check.select{
+    opacity: 1;
 }
